@@ -2,4 +2,5 @@
     <string name="app_name">AndoirDz</string>
     <string name="button_mainactivity_visibility">Visibility</string>
     <string name="button_mainactivity_CheckFields">CheckFields</string>
+    <string name="button_mainactivity_check_checkbox">Check Selected</string>
 </resources>

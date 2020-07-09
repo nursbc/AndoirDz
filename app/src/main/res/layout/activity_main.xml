@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
     tools:context=".MainActivity">
 
     <EditText
@@ -38,26 +45,50 @@
         android:layout_marginLeft="6dp"
         />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_mainaactivity_visibilitybutton"
+    <LinearLayout
+        android:id="@+id/linear_layout_main_activity_buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_mainactivity_visibility"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_mainactivity_showtext"
+        android:orientation="horizontal"
         android:layout_marginTop="6dp"
         android:layout_marginLeft="6dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_mainactivity_showtext">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_mainaactivity_CheckFields"
-        android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_mainaactivity_visibilitybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_mainactivity_visibility"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_mainaactivity_CheckFields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_mainactivity_CheckFields"
+            />
+
+        <Button
+            android:id="@+id/button_main_activity_checkbox_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_mainactivity_check_checkbox" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lainear_layout_main_activity_products"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_mainactivity_CheckFields"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_mainaactivity_visibilitybutton"
-        android:layout_marginTop="6dp"
-        android:layout_marginLeft="6dp"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_main_activity_buttons">
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

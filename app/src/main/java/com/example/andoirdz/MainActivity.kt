@@ -1,11 +1,13 @@
 package com.example.andoirdz
 
+import android.content.res.ColorStateList
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
+import androidx.annotation.RequiresApi
+import androidx.core.view.forEachIndexed
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -14,11 +16,53 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     val password = "fallen"
     val showtext = "It's so sad =("
 
+    var products : ArrayList<String> = ArrayList()
+    var linearLayoutProducts : LinearLayout? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initializeData()
+        initializeViews()
+        initializeCheckBox()
         initializeListeners()
+    }
+
+    fun initializeData()
+    {
+        products = arrayListOf("Bread",
+            "Honey",
+            "Chocolate",
+            "Apple",
+            "Banana",
+            "Nuts",
+            "Cake",
+            "Corn",
+            "Meat",
+            "Potato",
+            "Mango",
+            "Sausage",
+            "Meal",
+            "Apricot",
+            "Pineapple")
+    }
+
+    fun initializeCheckBox()
+    {
+        (0 until 15).forEach {
+            var p = products.shuffled().first()
+            var checkBox = CheckBox(getApplicationContext())
+            checkBox.setText(p)
+            products.remove(p)
+            linearLayoutProducts?.addView(checkBox)
+        }
+    }
+
+    fun initializeViews()
+    {
+        linearLayoutProducts = findViewById(R.id.lainear_layout_main_activity_products)
     }
 
     fun initializeListeners()
@@ -27,8 +71,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button_mainaactivity_CheckFields.setOnClickListener(this)
         edittext_mainactivity_name.setOnClickListener(this)
         edittext_mainactivity_password.setOnClickListener(this)
+        button_main_activity_checkbox_button.setOnClickListener(this)
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.button_mainaactivity_visibilitybutton -> {
@@ -74,7 +120,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     edittext_mainactivity_password.setText("")
                 }
             }
+            R.id.button_main_activity_checkbox_button -> {
+                linearLayoutProducts?.forEachIndexed { index, view ->
+                    (view as CheckBox).buttonTintList.let { R.color.colorAccent }
+                    view.setTextColor(getColorStateList(R.color.colorAccent))
+                    if(view.isChecked == false)
+                    {
+                        (view as CheckBox).buttonTintList.let { R.color.Red }
+                        view.setTextColor(getColorStateList(R.color.Red))
+                    }
+                }
+            }
         }
 
     }
 }
+
