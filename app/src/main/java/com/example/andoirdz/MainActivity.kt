@@ -122,12 +122,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button_main_activity_checkbox_button -> {
                 linearLayoutProducts?.forEachIndexed { index, view ->
-                    (view as CheckBox).buttonTintList.let { R.color.colorAccent }
-                    view.setTextColor(getColorStateList(R.color.colorAccent))
-                    if(view.isChecked == false)
+                    (view as CheckBox).setTextColor(getColorStateList(R.color.colorAccent))
+                    if((view as CheckBox).isChecked == false)
                     {
-                        (view as CheckBox).buttonTintList.let { R.color.Red }
-                        view.setTextColor(getColorStateList(R.color.Red))
+                        (view as CheckBox).setTextColor(getColorStateList(R.color.Red))
                     }
                 }
             }
