@@ -12,19 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
 
         </activity>
 
-        <activity android:name=".Dz4Activity">
+        <activity android:name=".Activity.Dz4Activity">
 
         </activity>
 
-        <activity android:name=".Dz4RegistratoinActivity">
+        <activity android:name=".Activity.Dz4RegistratoinActivity">
 
         </activity>
 
-        <activity android:name=".Dz5Activity">
+        <activity android:name=".Activity.Dz5SpeechRecognizer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

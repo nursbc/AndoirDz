@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         />
     <Button
-        android:id="@+id/activity_dz5_edit_text_record"
+        android:id="@+id/activity_dz5_button_record"
         android:layout_width="100dp"
         android:text="@string/activity_dz5_button_record"
         android:layout_height="45dp"
