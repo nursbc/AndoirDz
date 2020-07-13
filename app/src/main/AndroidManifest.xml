@@ -4,6 +4,13 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.CAMERA" android:required="true"/>
+
 
     <application
         android:allowBackup="true"
@@ -25,11 +32,19 @@
         </activity>
 
         <activity android:name=".Activity.Dz5SpeechRecognizer">
+
+        </activity>
+
+        <activity android:name=".Activity.Dz7getRegistrarionInformation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".Activity.Dz7showRegistrarionInformation">
+
         </activity>
 
     </application>
