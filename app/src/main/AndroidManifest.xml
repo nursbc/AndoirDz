@@ -4,10 +4,9 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <uses-permission
         android:name="android.permission.CAMERA" android:required="true"/>
 
@@ -19,23 +18,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name="com.example.andoirdz.Presenter.Activity.MainActivity">
 
         </activity>
 
-        <activity android:name=".Activity.Dz4Activity">
+        <activity android:name="com.example.andoirdz.Presenter.Activity.Dz4Activity">
 
         </activity>
 
-        <activity android:name=".Activity.Dz4RegistratoinActivity">
+        <activity android:name="com.example.andoirdz.Presenter.Activity.Dz4RegistratoinActivity">
 
         </activity>
 
-        <activity android:name=".Activity.Dz5SpeechRecognizer">
+        <activity android:name="com.example.andoirdz.Presenter.Activity.Dz5SpeechRecognizer">
 
         </activity>
 
-        <activity android:name=".Activity.Dz7getRegistrarionInformation">
+        <activity android:name="com.example.andoirdz.Presenter.Activity.Dz7getRegistrarionInformation">
+
+        </activity>
+
+        <activity android:name="com.example.andoirdz.Presenter.Activity.Dz7showRegistrarionInformation">
+
+        </activity>
+
+        <activity android:name="com.example.andoirdz.Presenter.Activity.StudentsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,9 +50,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity.Dz7showRegistrarionInformation">
-
-        </activity>
 
     </application>
 

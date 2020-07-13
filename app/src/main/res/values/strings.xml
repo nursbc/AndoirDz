@@ -15,4 +15,34 @@
     <string name="activity_user_registration_edittext_first_name_hint">Name</string>
     <string name="activity_user_registration_edittext_surname_hint">Surname</string>
     <string name="activity_user_registration_button_fill_info_text">Зарегистрироваться</string>
+
+
+    <string name="viewholder_student_name_header">Имя Студента</string>
+    <string name="viewholder_student_description_header">Описание: </string>
+    <string name="viewholder_student_mark_header">Оценка</string>
+    <string name="viewholder_student_group_header">Группа</string>
+
+
+    <string name="fragment_students_name">Name</string>
+    <string name="fragment_students_detail_text_view_detail">Details</string>
+    <string name="fragment_students_detail_text_view_mark">Mark</string>
+    <string name="fragment_students_detail_text_view_date_text">Date</string>
+    <string name="fragment_students_detail_text_view_group">Group</string>
+    <string name="button_Back_fragment_students_detail">Back</string>
+    <string name="button_update_fragment_students_detail">Update</string>
+    <string name="button_add_fragment_students_detail">Add Note</string>
+
+
+    <string name="button_fragment_student_sortbyname">SortByName</string>
+    <string name="button_fragment_student_sortbymark">SortByMark</string>
+    <string name="button_fragment_student_randomsort">RandomSort</string>
+    <string name="button_fragment_student_searchstudent">Search Student</string>
+    <string name="button_student_fragment_notes">Notes</string>
+
+    <string name="button_fragment_student_add_new_student">Add student</string>
+    <string name="button_fragment_student_add_new_photo">Add Photo</string>
+    <string name="button_fragment_student_cancel_new_student">Cancel</string>
+    <string name="button_fragment_student_add_date">Select Date</string>
+
+
 </resources>
