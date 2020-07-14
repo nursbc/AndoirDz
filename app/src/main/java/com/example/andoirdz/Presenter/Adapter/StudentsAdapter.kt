@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.andoirdz.Domain.Student
 import com.example.andoirdz.Presenter.Activity.StudentsActivity
 import com.example.andoirdz.Presenter.Fragment.StudentDetailFragment
+import com.example.andoirdz.Presenter.Fragment.StudentsFragment
 import com.example.andoirdz.Presenter.ViewHolder.StudentHolder
 import com.example.andoirdz.Presenter.ViewHolder.StudentHolderWithPhoto
 import com.example.andoirdz.R
@@ -55,10 +57,11 @@ class StudentsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     bundle.putSerializable("StudentDetailsFragment", students.get(position))
                     fragment.setArguments(bundle)
                     val fragmentManager: FragmentManager = (context as StudentsActivity).fragmentMenager
-                    fragmentManager?.beginTransaction()?.replace(
+                    fragmentManager?.beginTransaction()?.add(
                         R.id.relativelayout_activity_students_fragment_container,
                         fragment, "StudentDetailFragment"
                     )
+                        ?.hide((context as StudentsActivity).fragmentMenager.findFragmentByTag("StudentsFragment") as StudentsFragment)
                         ?.addToBackStack(null)
                         ?.commit()
                 })
@@ -72,10 +75,11 @@ class StudentsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     bundle.putParcelable("StudentDetailsFragment", students.get(position))
                     fragment.setArguments(bundle)
                     val fragmentManager: FragmentManager = (context as StudentsActivity).fragmentMenager
-                    fragmentManager?.beginTransaction()?.replace(
+                    fragmentManager?.beginTransaction()?.add(
                         R.id.relativelayout_activity_students_fragment_container,
                         fragment, "StudentDetailFragment"
                     )
+                        ?.hide((context as StudentsActivity).fragmentMenager.findFragmentByTag("StudentsFragment") as StudentsFragment)
                         ?.addToBackStack(null)
                         ?.commit()
                 })
