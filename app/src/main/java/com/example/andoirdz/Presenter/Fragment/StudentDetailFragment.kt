@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.fragment_student_details.*
 
 class StudentDetailFragment : Fragment(), View.OnClickListener {
 
+
     var student: Student? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {

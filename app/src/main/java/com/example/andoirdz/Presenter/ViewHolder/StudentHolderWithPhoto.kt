@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_students_add_student.*
 
 class StudentHolderWithPhoto (itemview : View) : RecyclerView.ViewHolder(itemview)
 {
+
     var context : Context? = null
     var textViewName : TextView? = null
     var textViewDescription : TextView? = null

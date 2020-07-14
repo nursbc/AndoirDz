@@ -5,6 +5,7 @@
         android:orientation="vertical"
         xmlns:tools="http://schemas.android.com/tools">
 
+
     <ImageView
         android:id="@+id/imageview_fragment_add_student"
         android:layout_width="wrap_content"
@@ -12,87 +13,87 @@
         android:layout_margin="5dp"
         android:src="@drawable/camera_stub_image" />
     <TextView
-            android:text="@string/viewholder_student_name_header"
-            android:textSize="14sp"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:text="@string/viewholder_student_name_header"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/textview_viewholder_student_name"
-            android:textColor="@color/ColorBlack"
-            android:textSize="14sp"
-            tools:text="Вася Пупкин"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:id="@+id/textview_viewholder_student_name"
+        android:textColor="@color/ColorBlack"
+        android:textSize="14sp"
+        tools:text="Вася Пупкин"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
-            android:text="@string/viewholder_student_description_header"
-            android:layout_width="wrap_content"
-            android:textSize="14sp"
-            android:layout_margin="5dp"
-            android:layout_height="wrap_content"/>
+        android:text="@string/viewholder_student_description_header"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/textview_viewholder_student_description"
-            android:textColor="@color/ColorBlack"
-            android:textSize="14sp"
-            android:layout_margin="5dp"
-            tools:text="Хороший студент"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:id="@+id/textview_viewholder_student_description"
+        android:textColor="@color/ColorBlack"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        tools:text="Хороший студент"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
-            android:text="@string/viewholder_student_mark_header"
-            android:layout_width="wrap_content"
-            android:textSize="14sp"
-            android:layout_margin="5dp"
-            android:layout_height="wrap_content"/>
+        android:text="@string/viewholder_student_mark_header"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"/>
 
     <TextView
-            android:id="@+id/textview_viewholder_student_mark"
-            android:textColor="@color/ColorBlack"
-            android:textSize="14sp"
-            android:layout_margin="5dp"
-            tools:text="Оценка"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
-    <TextView
-            android:id="@+id/viewholder_student_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="@string/viewholder_student_group_header"
-            android:textSize="14sp" />
-
-    <TextView
-            android:id="@+id/textview_viewholder_student_group_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textColor="@color/ColorBlack"
-            tools:text="@string/viewholder_student_group_header"
-            android:textSize="14sp" />
+        android:id="@+id/textview_viewholder_student_mark"
+        android:textColor="@color/ColorBlack"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        tools:text="Оценка"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
     <TextView
-            android:id="@+id/viewholder_student_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="День рождения"
-            android:textSize="14sp" />
+        android:id="@+id/viewholder_student_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/viewholder_student_group_header"
+        android:textSize="14sp" />
 
     <TextView
-            android:id="@+id/textview_viewholder_student_date_text"
-            android:textColor="@color/ColorBlack"
-            android:textSize="14sp"
-            android:layout_margin="5dp"
-            tools:text="День рождения"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:id="@+id/textview_viewholder_student_group_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColor="@color/ColorBlack"
+        tools:text="@string/viewholder_student_group_header"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/viewholder_student_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="День рождения"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textview_viewholder_student_date_text"
+        android:textColor="@color/ColorBlack"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        tools:text="День рождения"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

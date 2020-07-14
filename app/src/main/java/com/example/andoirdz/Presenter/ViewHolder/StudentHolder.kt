@@ -11,13 +11,13 @@ import com.example.andoirdz.Domain.Student
 import com.example.andoirdz.R
 
 class StudentHolder(itemview : View) : RecyclerView.ViewHolder(itemview) {
-    var context: Context? = null
+
+
     var textViewName: TextView? = null
     var textViewDescription: TextView? = null
     var textViewMark: TextView? = null
     var textViewDate: TextView? = null
     var textViewGroup: TextView? = null
-    var imageView: ImageView? = null
 
     init {
         initializeView()
