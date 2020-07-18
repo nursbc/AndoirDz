@@ -18,6 +18,7 @@ interface StudentFragmentContract {
 
         fun processData(students: ArrayList<Student>)
 
+
     }
 
     interface Presenter : BaseContract.BasePresenter<View>{

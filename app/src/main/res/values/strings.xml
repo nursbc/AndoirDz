@@ -47,5 +47,9 @@
     <string name="viewholder_group_title">Group</string>
     <string name="viewholder_group_count">Count</string>
 
+    <string name="viewholder_note_head">Заголовок: </string>
+    <string name="viewholder_note_description">Описание: </string>
+    <string name="viewholder_note_date">Дата: </string>
+
 
 </resources>

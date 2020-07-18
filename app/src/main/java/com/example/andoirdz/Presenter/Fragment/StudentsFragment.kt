@@ -121,6 +121,7 @@ class StudentsFragment : Fragment(), View.OnClickListener, StudentFragmentContra
             this.groupStudents?.students?.addAll(students)
         }
 
+
         override fun initializeListeners() {
             button_fragment_student_sortbyname?.setOnClickListener(this)
             button_fragment_student_sortbymark?.setOnClickListener(this)

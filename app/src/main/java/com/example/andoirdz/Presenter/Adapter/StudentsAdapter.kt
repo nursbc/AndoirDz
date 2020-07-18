@@ -23,10 +23,11 @@ class StudentsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder> {
     val NOTE_WITH_PHOTO = 1
     val NOTE_WITHOUT_PHOTO = 2
 
-    constructor(context: Context?, students: List<Student>) {
+    constructor(context: Context?, students: ArrayList<Student>) {
         this.context = context
         this.students = students
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         when (viewType) {

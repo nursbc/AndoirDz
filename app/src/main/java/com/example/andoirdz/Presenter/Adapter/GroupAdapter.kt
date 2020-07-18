@@ -12,6 +12,7 @@ import com.example.andoirdz.Domain.StudentsGroup
 import com.example.andoirdz.Presenter.Activity.StudentsActivity
 import com.example.andoirdz.Presenter.Fragment.GroupFragment
 import com.example.andoirdz.Presenter.Fragment.StudentsFragment
+import com.example.andoirdz.Presenter.Fragment.ViewPagerFragment
 import com.example.andoirdz.Presenter.ViewHolder.GroupHolder
 import com.example.andoirdz.R
 
@@ -46,7 +47,7 @@ class GroupAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder> {
             val fragmentManager: FragmentManager = (context as StudentsActivity).fragmentMenager
             fragmentManager?.beginTransaction()?.add(R.id.relativelayout_activity_students_fragment_container,
                 fragment,"StudentsFragment")
-                ?.hide((context as StudentsActivity).fragmentMenager.findFragmentByTag("GroupFragment") as GroupFragment)
+                ?.hide((context as StudentsActivity).fragmentMenager.findFragmentByTag("ViewPagerFragment") as ViewPagerFragment)
                 ?.addToBackStack(null)
                 ?.commit()
         })

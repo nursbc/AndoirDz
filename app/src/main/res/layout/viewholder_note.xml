@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        >
+
+
+    <TextView
+            android:id="@+id/viewholder_head"
+            android:text="@string/viewholder_note_head"
+            android:textSize="14sp"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    <TextView
+            android:id="@+id/textview_viewholder_note_head_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ColorBlack"
+            tools:text="Dela"
+            android:textSize="14sp"
+            />
+
+    <TextView
+            android:id="@+id/viewholder_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/viewholder_note_description"
+            android:textSize="14sp" />
+
+    <TextView
+            android:id="@+id/textview_viewholder_note_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ColorBlack"
+            tools:text="Vajnie"
+            android:textSize="14sp" />
+
+
+
+    <TextView
+            android:id="@+id/viewholder_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/viewholder_note_date"
+            android:textSize="14sp"/>
+
+
+    <TextView
+            android:id="@+id/textview_viewholder_note_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/White"
+            tools:text="2020:1:1"
+            android:textColor="@color/ColorBlack"
+            android:textSize="14sp" />
+
+
+</LinearLayout>

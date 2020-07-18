@@ -4,9 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.example.andoirdz.Presentation.Fragment.NotesFragment
 import com.example.andoirdz.Presenter.Base.baseActivity.BaseActivity
 import com.example.andoirdz.Presenter.Fragment.GroupFragment
 import com.example.andoirdz.Presenter.Fragment.StudentsFragment
+import com.example.andoirdz.Presenter.Fragment.ViewPagerFragment
 import com.example.andoirdz.R
 
 class StudentsActivity : BaseActivity() {
@@ -28,7 +30,7 @@ class StudentsActivity : BaseActivity() {
 
     override fun initializeDefaultFragment(){
         if(currentFragment==null){
-            currentFragment = GroupFragment()
+            currentFragment = ViewPagerFragment()
 
         }
 
@@ -36,8 +38,9 @@ class StudentsActivity : BaseActivity() {
     }
 
     override fun displayFragment(fragment : Fragment) {
+
         fragmentMenager.beginTransaction()
-            .add(R.id.relativelayout_activity_students_fragment_container,fragment!!, "GroupFragment")
+            .add(R.id.relativelayout_activity_students_fragment_container,fragment!!, "ViewPagerFragment")
             .commit()
     }
 
