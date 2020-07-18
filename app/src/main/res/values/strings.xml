@@ -44,5 +44,8 @@
     <string name="button_fragment_student_cancel_new_student">Cancel</string>
     <string name="button_fragment_student_add_date">Select Date</string>
 
+    <string name="viewholder_group_title">Group</string>
+    <string name="viewholder_group_count">Count</string>
+
 
 </resources>

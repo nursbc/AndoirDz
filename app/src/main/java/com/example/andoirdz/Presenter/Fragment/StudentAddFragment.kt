@@ -15,8 +15,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import com.example.andoirdz.Contract.StudentFragmentContract
+import com.example.andoirdz.Presenter.Contract.StudentFragmentContract
 import com.example.andoirdz.Domain.Student
+import com.example.andoirdz.Domain.StudentsGroup
 import com.example.andoirdz.R
 import kotlinx.android.synthetic.main.fragment_students_add_student.*
 import java.util.*
@@ -30,7 +31,14 @@ class StudentAddFragment : Fragment(), View.OnClickListener, StudentFragmentCont
     val month = selectDate.get(Calendar.MONTH)
     val day = selectDate.get(Calendar.DAY_OF_MONTH)
     var date: String? = null
+    var group : String = ""
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments.let {
+            group = it?.getString("group").toString()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -81,7 +89,7 @@ class StudentAddFragment : Fragment(), View.OnClickListener, StudentFragmentCont
             }
 
             R.id.button_fragment_student_add_student -> {
-                var bitmapImage: Bitmap? = null
+                var image: Bitmap? = null
                 when {
                     edittext_fragment_student_add_write_name.text.toString().isEmpty() -> {
                         edittext_fragment_student_add_write_name.setText("Write name")
@@ -94,22 +102,24 @@ class StudentAddFragment : Fragment(), View.OnClickListener, StudentFragmentCont
                     }
                     else -> {
                         if (imageview_fragment_add_student?.drawable is BitmapDrawable) {
-                            bitmapImage =
+                            image =
                                 (imageview_fragment_add_student?.drawable as BitmapDrawable).bitmap
                             var student: Student =
                                 Student(
                                     edittext_fragment_student_add_write_name.text.toString(),
                                     edittext_fragment_student_add_write_description.text.toString(),
-                                    edittext_fragment_student_add_write_mark.text.toString()
-                                        .toFloat(),
+                                    edittext_fragment_student_add_write_mark.text.toString().toFloat(),
                                     this.date,
-                                    edittext_fragment_student_add_write_group.text.toString(),
-                                    bitmapImage
+                                    this.group,
+                                    image
                                 )
+
                             val fragment =
                                 fragmentManager?.findFragmentByTag("StudentsFragment") as StudentsFragment
 
                             fragment.presenter.initiateAddNewStudent(student)
+                            fragment.presenter.initiateSortStudentsByName()
+                            fragment.initializeAdapter()
 
                             val fragmentManager = fragmentManager
                             fragmentManager?.popBackStack()

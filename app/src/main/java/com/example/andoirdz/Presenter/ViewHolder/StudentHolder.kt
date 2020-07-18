@@ -17,7 +17,6 @@ class StudentHolder(itemview : View) : RecyclerView.ViewHolder(itemview) {
     var textViewDescription: TextView? = null
     var textViewMark: TextView? = null
     var textViewDate: TextView? = null
-    var textViewGroup: TextView? = null
 
     init {
         initializeView()
@@ -28,7 +27,6 @@ class StudentHolder(itemview : View) : RecyclerView.ViewHolder(itemview) {
         textViewDescription = itemView.findViewById(R.id.textview_viewholder_student_description)
         textViewMark = itemView.findViewById(R.id.textview_viewholder_student_mark)
         textViewDate = itemView.findViewById(R.id.textview_viewholder_student_date_text)
-        textViewGroup = itemView.findViewById(R.id.textview_viewholder_student_group_text)
 
     }
 
@@ -37,7 +35,6 @@ class StudentHolder(itemview : View) : RecyclerView.ViewHolder(itemview) {
         textViewName?.setText(student.name)
         textViewDescription?.setText(student.description)
         textViewMark?.setText(student.mark.toString())
-        textViewGroup?.setText(student.studentGroup)
 
         if (student.date == null) {
             textViewDate?.setText("")
