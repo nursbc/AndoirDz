@@ -1,6 +1,5 @@
-package com.example.andoirdz
+package com.example.andoirdz.Presenter.Activity
 
-import android.content.res.ColorStateList
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +7,7 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.core.view.forEachIndexed
+import com.example.andoirdz.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {

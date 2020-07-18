@@ -1,4 +1,4 @@
-package com.example.andoirdz.Activity
+package com.example.andoirdz.Presenter.Activity
 
 import android.app.Activity
 import android.content.Intent
@@ -10,9 +10,6 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +19,7 @@ import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 class Dz7getRegistrarionInformation : AppCompatActivity(), View.OnClickListener {
-    
+
     private var cameraStubBitmap: Bitmap? = null
     private val REQUEST_IMAGE_CAPTURED = 1
 

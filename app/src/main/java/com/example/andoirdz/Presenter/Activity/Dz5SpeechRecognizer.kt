@@ -1,4 +1,4 @@
-package com.example.andoirdz.Activity
+package com.example.andoirdz.Presenter.Activity
 
 import android.app.Activity
 import android.content.ActivityNotFoundException

@@ -1,4 +1,4 @@
-package com.example.andoirdz.Activity
+package com.example.andoirdz.Presenter.Activity
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
