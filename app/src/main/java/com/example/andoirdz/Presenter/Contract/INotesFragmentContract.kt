@@ -4,7 +4,7 @@ package com.example.andoirdz.Presenter.Contract
 import com.example.andoirdz.Domain.Note
 import com.example.myapplication.Presentation.Base.BaseContract
 
-interface NotesFragmentContract {
+interface INotesFragmentContract {
 
     interface View : BaseContract.BaseView{
         fun initializeNotePresenter()

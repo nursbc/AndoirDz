@@ -3,15 +3,15 @@ package com.example.andoirdz.Presenter.Presenters
 import android.os.Build
 import androidx.annotation.RequiresApi
 import com.example.andoirdz.Domain.Note
-import com.example.andoirdz.Presenter.Contract.NotesFragmentContract
+import com.example.andoirdz.Presenter.Contract.INotesFragmentContract
 
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.collections.ArrayList
 
-class NotesFragmentPresenter : NotesFragmentContract.Presenter {
+class NotesFragmentPresenter : INotesFragmentContract.Presenter {
 
-    var viewNote : NotesFragmentContract.View? = null
+    var viewNote : INotesFragmentContract.View? = null
 
     var notes : ArrayList<Note> = ArrayList()
 
@@ -48,7 +48,7 @@ class NotesFragmentPresenter : NotesFragmentContract.Presenter {
         viewNote?.NoteAdapter(notes)
     }
 
-    override fun attach(view: NotesFragmentContract.View) {
+    override fun attach(view: INotesFragmentContract.View) {
         this.viewNote = view
     }
 

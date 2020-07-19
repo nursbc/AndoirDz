@@ -5,7 +5,7 @@ import com.example.andoirdz.Domain.StudentsGroup
 import com.example.myapplication.Presentation.Base.BaseContract
 
 
-interface StudentFragmentContract {
+interface IStudentFragmentContract {
 
     interface View : BaseContract.BaseView{
         fun initializePresenter()

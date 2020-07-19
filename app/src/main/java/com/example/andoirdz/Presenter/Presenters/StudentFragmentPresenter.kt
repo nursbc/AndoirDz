@@ -1,13 +1,12 @@
 package com.example.andoirdz.Presenter.Presenters
 
 import com.example.andoirdz.Domain.Student
-import com.example.andoirdz.Domain.StudentsGroup
-import com.example.andoirdz.Domain.StudentsSortUseCase
-import com.example.andoirdz.Presenter.Contract.StudentFragmentContract
+import com.example.andoirdz.Domain.UseCase.StudentsSortUseCase
+import com.example.andoirdz.Presenter.Contract.IStudentFragmentContract
 
-class StudentFragmentPresenter : StudentFragmentContract.Presenter{
+class StudentFragmentPresenter : IStudentFragmentContract.Presenter{
 
-    var view : StudentFragmentContract.View? = null
+    var view : IStudentFragmentContract.View? = null
     var studentsSortUseCase : StudentsSortUseCase
 
     var students : ArrayList<Student> = ArrayList()
@@ -70,7 +69,7 @@ class StudentFragmentPresenter : StudentFragmentContract.Presenter{
         view?.initiateUpdateAdapter()
     }
 
-    override fun attach(view: StudentFragmentContract.View) {
+    override fun attach(view: IStudentFragmentContract.View) {
         this.view = view
     }
 

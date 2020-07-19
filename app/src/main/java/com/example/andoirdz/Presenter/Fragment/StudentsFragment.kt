@@ -10,13 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.andoirdz.Domain.Student
 import com.example.andoirdz.Domain.StudentsGroup
-import com.example.andoirdz.Presenter.Contract.StudentFragmentContract
+import com.example.andoirdz.Presenter.Contract.IStudentFragmentContract
 import com.example.andoirdz.Presenter.Adapter.StudentsAdapter
 import com.example.andoirdz.Presenter.Presenters.StudentFragmentPresenter
 import com.example.andoirdz.R
 import kotlinx.android.synthetic.main.fragment_students.*
 
-class StudentsFragment : Fragment(), View.OnClickListener, StudentFragmentContract.View {
+class StudentsFragment : Fragment(), View.OnClickListener, IStudentFragmentContract.View {
 
     var groupStudents: StudentsGroup? = null
 

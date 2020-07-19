@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.fragment_viewpager.*
 
 class ViewPagerFragment : Fragment() {
 
-    var students: ArrayList<Student> = ArrayList()
     var adapter : ViewPagerAdapter? = null
     var rootView : View? = null
 
