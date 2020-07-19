@@ -6,12 +6,12 @@
         android:orientation="vertical"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
             android:id="@+id/fragment_notes_floating_button_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_plus_one_24"
             android:background="@color/colorPrimary"
+        android:text="AddNote"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_margin="16dp"
