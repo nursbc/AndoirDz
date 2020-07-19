@@ -22,7 +22,15 @@ class Student() : Serializable, Parcelable {
         description = parcel.readString().toString()
         mark = parcel.readFloat()
         date = parcel.readString()
+        studentGroup = parcel.readString().toString()
         avatar = parcel.readParcelable(Bitmap::class.java.classLoader)
+    }
+
+    constructor(name: String, description : String, mark : Float, studentGroup : String) : this() {
+        this.name = name
+        this.description = description
+        this.mark = mark
+        this.studentGroup = studentGroup
     }
 
     constructor(name: String, description : String, mark : Float, avatar : Bitmap? = null) : this() {
@@ -71,6 +79,10 @@ class Student() : Serializable, Parcelable {
 
     override fun describeContents(): Int {
         return 0
+    }
+
+    override fun toString(): String {
+        return "Student(name='$name', description='$description', mark=$mark, date=$date, studentGroup='$studentGroup')"
     }
 
 

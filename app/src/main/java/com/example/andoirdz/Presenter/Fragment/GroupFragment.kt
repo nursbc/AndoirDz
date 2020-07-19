@@ -1,19 +1,21 @@
 package com.example.andoirdz.Presenter.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.andoirdz.Domain.Student
 import com.example.andoirdz.Domain.StudentsGroup
 import com.example.andoirdz.Presenter.Adapter.GroupAdapter
-import com.example.andoirdz.Presenter.Contract.GroupFragmentContract
+import com.example.andoirdz.Presenter.Contract.IGroupFragmentContract
 import com.example.andoirdz.Presenter.Presenters.GroupFragmentPresenter
 import com.example.andoirdz.R
 import kotlinx.android.synthetic.main.fragment_groups.*
 
-class GroupFragment : Fragment(), View.OnClickListener, GroupFragmentContract.View  {
+class GroupFragment : Fragment(), View.OnClickListener, IGroupFragmentContract.View  {
 
     var studentsGroup : ArrayList<StudentsGroup> = ArrayList()
 
@@ -39,6 +41,23 @@ class GroupFragment : Fragment(), View.OnClickListener, GroupFragmentContract.Vi
         initializeLayoutManager()
         initializeAdapter()
         presenter.initializeData()
+
+        test()
+    }
+
+    fun test()
+    {
+        for (g in studentsGroup)
+        {
+            for(s in g.students)
+            {
+                if(s.studentGroup == g.title)
+                {
+                    Log.d("Student", s.toString())
+                    return
+                }
+            }
+        }
     }
 
 

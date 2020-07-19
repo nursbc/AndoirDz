@@ -2,11 +2,11 @@ package com.example.andoirdz.Presenter.Presenters
 
 import com.example.andoirdz.Domain.Student
 import com.example.andoirdz.Domain.StudentsGroup
-import com.example.andoirdz.Presenter.Contract.GroupFragmentContract
+import com.example.andoirdz.Presenter.Contract.IGroupFragmentContract
 
-class GroupFragmentPresenter : GroupFragmentContract.Presenter {
+class GroupFragmentPresenter : IGroupFragmentContract.Presenter {
 
-    var view: GroupFragmentContract.View? = null
+    var view: IGroupFragmentContract.View? = null
 
     var groupStudents: ArrayList<StudentsGroup> = ArrayList()
 
@@ -19,28 +19,32 @@ class GroupFragmentPresenter : GroupFragmentContract.Presenter {
                 Student(
                     "Adam",
                     "Good Student",
-                    mark = 5.0F
+                    5.0F,
+                    "1"
                 )
             )
             add(
                 Student(
                     "Zoe",
                     "Avarage Student",
-                    mark = 2.0F
+                    mark = 2.0F,
+                    studentGroup = "1"
                 )
             )
             add(
                 Student(
                     "Gendalf",
                     "Good Student",
-                    mark = 5.0F
+                    mark = 5.0F,
+                    studentGroup = "2"
                 )
             )
             add(
                 Student(
                     "Geralt",
                     "Good Student",
-                    mark = 2.0F
+                    mark = 2.0F,
+                    studentGroup = "2"
                 )
             )
 
@@ -48,10 +52,10 @@ class GroupFragmentPresenter : GroupFragmentContract.Presenter {
 
         view?.processData(groupStudents.apply {
             add(
-                StudentsGroup("1", students)
+                StudentsGroup("1", students.filter { student -> student.studentGroup == "1"  } as ArrayList<Student>)
             )
             add(
-                StudentsGroup("2", students)
+                StudentsGroup("2", students.filter { student -> student.studentGroup == "2" } as ArrayList<Student>)
             )
         })
 
@@ -62,7 +66,7 @@ class GroupFragmentPresenter : GroupFragmentContract.Presenter {
         TODO("Not yet implemented")
     }
 
-    override fun attach(view: GroupFragmentContract.View) {
+    override fun attach(view: IGroupFragmentContract.View) {
         this.view = view
     }
 

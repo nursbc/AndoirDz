@@ -1,5 +1,6 @@
-package com.example.andoirdz.Domain
+package com.example.andoirdz.Domain.UseCase
 
+import com.example.andoirdz.Domain.Student
 import kotlin.collections.ArrayList
 
 class StudentsSortUseCase {
